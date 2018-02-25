@@ -9,29 +9,43 @@ form.addEventListener("submit", e => {
     console.log("datos válido... enviar...");
   } else {
     console.log("datos inválidos");
+    alert('Los datos son inválidos');
   }
 });
 
+/*getting value*/
+
+
+
 function validateCardDetails(element) {
   //escribe tu código aqui
-  let total = array.map((uno) => {
-    //arrojando nuevo arrat con los datos del input
-    return uno.value;
-  })
-  //total.forEach((inputValue, whatweGot) =>{
 
-  //});
+const valueCard = document.getElementById('cn').value;
+const valueExp = document.getElementById('exp').value;
+const valueCvv = document.getElementById('cvv').value;
+const valueName = document.getElementById('name').value;
+console.log(valueCard);
+console.log(valueExp);
+console.log(valueCvv);
+console.log(valueName);
+validate(valueCard, valueExp, valueCvv, valueName);
 
-  console.log(total);
-  getValues(element)
+valueExp = (expedCV) => {
 
+  console.log(expedCV)
 }
 
-let valueCard = document.getElementById('cn').value;
-let valueExp = document.getElementById('exp').value;
-let valueCvv = document.getElementById('cvv').value;
-let valueName = document.getElementById('name').value;
-console.log(inputValue);
+
+  let total = array.map((getArr) => {
+    //arrojando nuevo array con los datos del input
+    return getArr.value;
+  });
+ console.log(total);
+ getValues(element)
+}  
+  /*var valueCard = total.filter()*/
+
+  //validando Fecha de expedición
 
 
   const getValues = (array) => {
